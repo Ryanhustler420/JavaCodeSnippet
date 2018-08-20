@@ -219,3 +219,48 @@ boolean wasCar = isCar ? true : false;
 - result -= 10;
 - result /= 10;
 
+
+# Keywords And Expressions
+
+**java has 50 reserve keywords**
+
+here is the complete list of Keywords [Java Keywords List](https://en.wikipedia.org/wiki/List_of_Java_keywords) & [here](https://javaconceptoftheday.com/java-keywords-with-examples/).
+
+> int int = 5; **wrong** <br />
+> int int2 = 5; **right**
+
+## expression = are building blocks of java programs
+
+> double kilometers = (100 * 1.609344); <br />
+kilometers = (100 * 1.609344); this is expression including variable name except datatype
+
+
+## Code snippet
+```
+int highScore = 50; 	// this is expression except datatype and semicolon
+
+if(highScore == 50) { 	// this is expression
+
+	System.out.println("This is an expression");
+		// ("This is an expression") <- this is expression except "System.out.println"
+		//NOTE : - anything withen bracket is called expression
+
+	int score = 100; 
+		// score = 100 is expression except datatype and semicolon
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
