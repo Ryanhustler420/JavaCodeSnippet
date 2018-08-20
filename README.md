@@ -145,3 +145,77 @@ _________________
 ```
   byte = myNewBytevalue = (byte) (myByteValue/2);
 ```
+
+# Operators
+
+```
+// Adding
+int result = 1 + 2;
+System.out.println("1 + 2" + result);
+
+
+int previousResult = result;
+
+//Subtracting
+result = result - 1;
+System.out.println(previousResult + " - 1 =" + result);
+
+previousResult = result;
+
+// Multiply
+result = result * 10;
+System.out.println(previousResult + " * 10 ="  + result);
+
+previousResult = result;
+
+// Divide
+result = result */10;
+System.out.println(previousResult + " / 5 ="  + result);
+
+previousResult = result;
+
+//reminder
+result = result % 3;
+System.out.println(previousResult + " % 3 ="  + result);
+
+previousResult = result;
+
+//Adding using short hand x++;
+result = result++;
+System.out.println("Result is now "  + result);
+
+```
+
+## diffrence between single = and ==
+```
+boolean isAlien = false;	// assigning
+
+if(isAlien == false)		//compairing
+	Ststem.out.println('Its not an Alien');
+
+int topScore = 100;
+
+if(topScore == 100)
+	Ststem.out.println('You got the high score');
+
+if(topScore >= 100)
+if(topScore != 100)
+if(topScore <= 100)
+if(topScore <= 100 || topScore >= 0)
+if(topScore <= 100 && topScore >= 0)
+
+```
+> ternary in java
+
+```
+boolean isCar = true;
+boolean wasCar = isCar ? true : false;
+```
+
+
+> short hand 
+- result += 2;
+- result *= 10;
+- result -= 10;
+- result /= 10;
+
