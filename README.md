@@ -54,7 +54,7 @@ which is defined by java language and it is named as special reserved keyword
 - String myString = "This is a String";
 - String myString = "This is a String" + ", this is more string";
 
-```
+```java
 String numberString = "250.55";
 numberString = numberString + "49.95";
 System.out.println("The result is " + numberString);
@@ -70,7 +70,7 @@ System.out.println("LastString is equal to " + lastString);
 
 ## Code example
 
-``` 
+```java 
 int myIntValue = 5;
 float myFloatValue = 5f;
 float myFloatValueAlternative = (float) 5.4;
@@ -96,15 +96,15 @@ System.out.println("myDoubleValueAlternative:" + myDoubleValueAlternative);
 
 ## Complete Primitive Example
 
-```
-> has a width of 32bit (4 bytes)
+```java
+//has a width of 32bit (4 bytes)
   int myIntValue = 5 / 2;
 
-> has a width of 32bit (4 bytes)
+//has a width of 32bit (4 bytes)
   float myFloatValue = 5f / 2f;
   float myFloatValueAlternative = (float) 5.4 / (float)2;
 
-> has a width of 64bit (8 bytes)
+//has a width of 64bit (8 bytes)
   double myDoubleValue = (double) 5/2;
   double myDoubleValueAlternative = 5d  /2d;
   System.out.println("myInt:" + myIntValue);
@@ -123,7 +123,7 @@ System.out.println("myDoubleValueAlternative:" + myDoubleValueAlternative);
 
 **use double in java which is recommended way because of correctness value and java inbuild class also uses double like math class**
 > convert a give number of pound to kilogram
-```
+```java
 double pound = 200d;
 double kilogram = pound * 0.45359237;
 System.out.println(kilogram);
@@ -136,19 +136,19 @@ _________________
 
 # Casting
 
-```
+```java
   byte myByteValue = -128;
   byte myNewBytevalue = (myByteValue/2); **throw error**
 ```
 > simple fix
 
-```
+```java
   byte = myNewBytevalue = (byte) (myByteValue/2);
 ```
 
 # Operators
 
-```
+```java
 // Adding
 int result = 1 + 2;
 System.out.println("1 + 2" + result);
@@ -187,7 +187,7 @@ System.out.println("Result is now "  + result);
 ```
 
 ## diffrence between single = and ==
-```
+```java
 boolean isAlien = false;	// assigning
 
 if(isAlien == false)		//compairing
@@ -207,7 +207,7 @@ if(topScore <= 100 && topScore >= 0)
 ```
 > ternary in java
 
-```
+```java
 boolean isCar = true;
 boolean wasCar = isCar ? true : false;
 ```
@@ -236,7 +236,7 @@ kilometers = (100 * 1.609344); this is expression including variable name except
 
 
 ## Code snippet
-```
+```java
 int highScore = 50; 	// this is expression except datatype and semicolon
 
 if(highScore == 50) { 	// this is expression
