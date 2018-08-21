@@ -180,3 +180,70 @@ public static int calculateHighScorePosition(int playerScore) {
 }
 
 ```
+
+# Method Overloading
+
+> Method Overloading is when methods name are same but Parameter numbers will be different.
+```java
+public static void main(String[] args) {
+
+	int newScore = calculateScore("Gaurav Gupta", 500);
+	System.out.println("new Score " + newScore);
+
+	int newScoreWithoutPlayerName = calculateScore(500);
+	System.out.println("new Score without name " + newScoreWithoutPlayerName);
+
+	calculateScore();
+	System.out.println(calcFeetAndInchesToCentimeters(54));
+
+}								
+
+public static int calculateScore(String playerName, int score) {
+	System.out.println("Player " + playerName + " score " + score + " points");
+	return score * 1000;
+}
+
+public static int calculateScore(int score) {
+	System.out.println("Unnamed Player scored " + score + " points");
+	return score * 1000;
+}
+
+public static int calculateScore() {
+	System.out.println("no player name with no player score");
+	return 0; // similar to nothing
+}
+
+```
+
+> NOTE: Method name is similar but data type is different but it still wont help you to make method overloading for method overloading you have to change the parameter quantity
+
+```java	
+		
+public static void calculateScore() {
+	System.out.println("no player name with no player score");
+}
+
+public static double calcFeetAndInchesToCentimeters(double feet,double inches) {
+	if(feet >= 0 || (inches >= 0 || inches <= 12)){
+		double centimeters = (12 * feet) * 2.54;
+		centimeters += inches * 2.54;
+		System.out.println(feet + " feet, " + inches + " inches = " + centimeters + " cm");
+		return centimeters;
+	}else {
+		System.out.println("Invalid deet or Inches parameters");
+		return -1;
+	}
+}
+
+
+public static double calcFeetAndInchesToCentimeters(double inches) {
+	if(inches < 0) {
+		return -1;
+	}
+	double feet = (int) inches / 12;
+	double remainingInches = (int) inches % 12;
+	System.out.println(inches + " inches is equal to " + feet + " feet and " + remainingInches + " inches");
+	return calcFeetAndInchesToCentimeters(feet,remainingInches);
+}
+
+```
