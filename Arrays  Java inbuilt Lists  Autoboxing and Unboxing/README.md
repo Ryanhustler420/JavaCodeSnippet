@@ -133,6 +133,8 @@ public static double getAverage(int[] array) {
 
 # Sorting Array
 
+> this approch will modify the original Array Element **BE CAREFULL**
+
 ```java
 private static Scanner scanner = new Scanner(System.in);
 
@@ -173,3 +175,32 @@ public static void printArray(int[] array) {
 }
 
 ```
+## Copy an Array to another Array
+
+> this method will not modify the original array which is being pass as params
+
+```java
+
+//Copying array
+
+public static int[] sortArray(int[] array) {
+	int[] sortedArray = new int[array.length];
+	
+	for(int i=0;i<array.length;i++){
+		sortedArray[i] = array[i];
+	}
+	
+	for (int i = 0; i < sortedArray.length - 1; i++) {
+		for (int j = 0; j < sortedArray.length - 1; j++) {
+			if (sortedArray[j] < sortedArray[j + 1]) {
+				int temp = sortedArray[j + 1];
+				sortedArray[j + 1] = sortedArray[j];
+				sortedArray[j] = temp;
+			}
+		}
+	}
+	return sortedArray;
+}
+
+```
+
