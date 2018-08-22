@@ -177,6 +177,10 @@ public static void printArray(int[] array) {
 ```
 ## Copy an Array to another Array
 
+###### there is a class in java called [Array](https://docs.oracle.com/javase/7/docs/api/java/util/Arrays.html) which comes with built-in function for copying array!
+
+
+
 > this method will not modify the original array which is being pass as params
 
 ```java
