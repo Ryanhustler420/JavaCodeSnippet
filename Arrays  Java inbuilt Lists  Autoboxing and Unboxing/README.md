@@ -130,3 +130,46 @@ public static double getAverage(int[] array) {
 }
 
 ```
+
+# Sorting Array
+
+```java
+private static Scanner scanner = new Scanner(System.in);
+
+public static void main(String[] args) {
+	// Array Challenge
+	int[] gettingInt = getIntegers(4);
+	int[] sortedArray = sortArray(gettingInt);
+	printArray(sortedArray);
+}
+
+public static int[] getIntegers(int arrayLength) {
+	int[] newInt = new int[arrayLength];
+
+	for (int i = 0; i < arrayLength; i++) {
+		newInt[i] = scanner.nextInt();
+	}
+
+	return newInt;
+}
+
+public static int[] sortArray(int[] array) {
+	for (int i = 0; i < array.length - 1; i++) {
+		for (int j = 0; j < array.length - 1; j++) {
+			if (array[j] < array[j + 1]) {
+				int temp = array[j + 1];
+				array[j + 1] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+	return array;
+}
+
+public static void printArray(int[] array) {
+	for (int i = 0; i < array.length; i++) {
+		System.out.println("array is " + array[i]);
+	}
+}
+
+```
