@@ -189,16 +189,19 @@ public static int[] sortArray(int[] array) {
 	for(int i=0;i<array.length;i++){
 		sortedArray[i] = array[i];
 	}
-	
-	for (int i = 0; i < sortedArray.length - 1; i++) {
-		for (int j = 0; j < sortedArray.length - 1; j++) {
-			if (sortedArray[j] < sortedArray[j + 1]) {
-				int temp = sortedArray[j + 1];
-				sortedArray[j + 1] = sortedArray[j];
-				sortedArray[j] = temp;
+	boolean flag = true;
+	while(flag){
+	flag = false;
+		for (int i = 0; i < sortedArray.length - 1; i++) {
+			if (sortedArray[i] < sortedArray[i + 1]) {
+				int temp = sortedArray[i];
+				sortedArray[i] = sortedArray[i + 1];
+				sortedArray[i + 1] = temp;
+				flag = true;
 			}
 		}
 	}
+	
 	return sortedArray;
 }
 
