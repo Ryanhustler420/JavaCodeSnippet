@@ -286,7 +286,59 @@ public static void main(String[] args){
 8 <-- sum of 2,6
 
 */
+
 ```
+
+# Special Sum of Array
+
+```java
+int n=3,sum=0;
+int[] myArray = new int[n];
+
+for(int i=0;i<n;i++) {
+	myArray[i] = s.nextInt();
+}
+
+for(int i=0;i<myArray.length;i++) {
+	sum+=myArray[i];
+}
+
+while(sum>9) {
+	String val = Integer.toString(sum);
+	sum = 0;
+	for(int i=0;i<val.length();i++) {
+		sum += (int) val.charAt(i) - 48;				
+	}
+}
+
+System.out.println(sum);
+
+
+/*
+
+	3 <- size of array
+
+	9 9 9 <- Element
+
+	9 <- answer
+
+	>>Explanation
+
+	9 + 9 + 9
+
+	2 + 7 = 9
+
+	Hence,ans is 9
+
+*/
+
+
+```
+
+
+
+
+
 
 
 
