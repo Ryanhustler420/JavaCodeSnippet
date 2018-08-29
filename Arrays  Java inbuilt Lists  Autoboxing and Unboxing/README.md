@@ -210,6 +210,39 @@ public static int[] sortArray(int[] array) {
 }
 
 ```
+
+# How to copy the contents of one ArrayList into another? Without Pointer
+
+> Copying ArryList to another ArrayList cause pointer Problem because even though the ArrayList is copied but still both of them pointing to the same Location so modification of one ArrayList will Modify the another one.
+
+```java
+ArrayList<Object> myObject = new ArrayList<Object>();
+ArrayList<Object> myTempObject = new ArrayList<Object>();
+
+
+//fill myTempObject here
+....
+
+//make myObject contain the same values as myTempObject
+myObject = myTempObject;
+
+//free up memory by clearing myTempObject
+myTempObject.clear();
+
+```
+
+> Easy Fix
+```java
+	myObject = new ArrayList<Object>(myTempObject);
+```
+or use
+```java
+	myObject = (ArrayList<Object>)myTempObject.clone();
+```
+**But you should remember, that all these ways will give you a copy of your List, not all of its elements. So if you change one of the elements in your copied List, it will also be changed in your original List.**
+
+
+
 # Resize an array
 
 ```java
