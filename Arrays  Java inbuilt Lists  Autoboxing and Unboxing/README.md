@@ -335,6 +335,43 @@ System.out.println(sum);
 
 ```
 
+# Consecutive element using Array
+
+>> Array Elements Value has difftence of 1 Like for Example :- 3,7,2,5,4,6 will be 2,3,4,5,6,7 so this is Consecutive element Array
+
+```java
+int[] arr = {1,3,4,4,2};
+
+// 1 9 2 4 0 3
+// 10 1 2 3 8 6 7 2 4 9 12 3 5 7 19 20 14 15 17 18
+// 3,7,2,5,4,6
+
+Arrays.sort(arr);
+
+for(int i=0;i<arr.length;i++) {
+	System.out.print(arr[i] + " ");
+}
+
+System.out.println();
+boolean isShorted = true;
+
+boolean initial = true;
+for(int i=0;i<arr.length-1;i++) {
+	int value = arr[i+1] - arr[i];
+	if(value==1 || value == 0 && initial) {
+		isShorted = true;
+		initial = true;
+	}else {
+		isShorted = false;
+		initial = false;
+	}			
+}
+
+System.out.println(isShorted);
+
+
+```
+
 
 
 
