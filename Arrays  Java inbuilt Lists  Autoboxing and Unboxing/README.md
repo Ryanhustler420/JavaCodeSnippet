@@ -252,3 +252,42 @@ private static void resizeArray() {
 
 
 ```
+
+# Sum of Array Element
+
+```java
+import java.utils.Scanner;
+
+private static Scanner s = new Scanner(System.in);
+public static void main(String[] args){
+	int n=4,sum=0;
+	int[] myArray = new int[n];
+
+
+	for(int i=0;i<n;i++) {
+		myArray[i] = s.nextInt();
+	}
+
+	for(int i=0;i<myArray.length;i++) {
+		if(myArray[i]%2==0 || myArray[i]%3==0) {
+			sum+=myArray[i];
+		}
+	}
+
+	System.out.println(sum);
+
+}
+
+/*
+>> Output
+
+4 <-- Size
+2 4 5 6 <-- Element
+8 <-- sum of 2,6
+
+*/
+```
+
+
+
+
