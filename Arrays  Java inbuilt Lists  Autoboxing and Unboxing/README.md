@@ -488,3 +488,57 @@ public class RemoveDuplicateInArrayExample{
 
 
 ```
+
+# Find the compatibility difference between two arrays
+
+```java
+
+public class Compatability_difference {
+
+    static int findDifference(int a1[], int a2[], int n)
+    {
+        int res = 0;
+     
+        for (int i = 0; i < n; i++) {
+     
+            // If elements at current position
+            // are not same 
+            if (a1[i] != a2[i]) {
+     
+                // Find position of a1[i] in a2[]
+                int j = i + 1;
+                while (a1[i] != a2[j]) 
+                    j++;
+                 
+                // Insert the element a2[j] at
+                // a2[i] by moving all intermediate
+                // elements one position ahead.
+                while (j != i) {
+                    
+                    //swap
+                    int temp = a2[j - 1];
+                    a2[j - 1] = a2[j];
+                    a2[j] = temp;
+                    j--;
+                    res++;
+                }
+            }
+        }
+        return res;
+    }
+     
+    // Driver code
+    public static void main(String args[])
+    {
+        int a1[] = { 3, 1, 2, 4, 5 };
+        int a2[] = { 3, 2, 4, 1, 5 };
+        int n = a1.length;
+        
+        System.out.println(findDifference(a1, a2, n));
+    }
+}
+
+
+```
+
+
