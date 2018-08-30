@@ -171,3 +171,23 @@ public class Main {
 }
 
 ```
+# ArrayList Code Snippet
+
+## convert int[] into List < Integer > in Java
+
+```
+There is no shortcut for converting from int[] to List<Integer>
+as Arrays.asList does not deal with boxing and will just create a List<int[]> which is not what you want.
+You have to make a utility method.
+
+```
+
+```java
+int[] ints = {1, 2, 3};
+List<Integer> intList = new ArrayList<Integer>();
+for (int i : ints)
+{
+    intList.add(i);
+}
+
+```
