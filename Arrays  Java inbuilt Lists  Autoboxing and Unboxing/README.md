@@ -32,6 +32,101 @@ myStringArray = new String[]{"a","b","c"};
 
 ```
 
+## Prefrence
+
+> One Dimensional Array
+
+> Syntax for default values:
+
+```java
+int[] num = new int[5];
+```
+``Or (less preferred)``
+
+```java
+int num[] = new int[5];
+```
+
+``Syntax with values given (variable/field initialization):``
+```java
+int[] num = {1,2,3,4,5};
+```
+``Or (less preferred)``
+```java
+int num[] = {1, 2, 3, 4, 5};
+```
+**Note: For convenience int[] num is preferable because it clearly tells that you are talking here about array. Otherwise no difference. Not at all.
+**
+
+> Multidimensional array
+
+``Declaration``
+
+```java
+int[][] num = new int[5][2];
+```
+
+``Or``
+
+```java
+int num[][] = new int[5][2];
+```
+
+``Or``
+
+```java
+int[] num[] = new int[5][2];
+```
+
+```java
+Initialization
+ num[0][0]=1;
+ num[0][1]=2;
+ num[1][0]=1;
+ num[1][1]=2;
+ num[2][0]=1;
+ num[2][1]=2;
+ num[3][0]=1;
+ num[3][1]=2;
+ num[4][0]=1;
+ num[4][1]=2;
+```
+
+``Or``
+
+```java
+ int[][] num={ {1,2}, {1,2}, {1,2}, {1,2}, {1,2} };
+ // Ragged Array (or Non-rectangular Array)
+ int[][] num = new int[5][];
+ num[0] = new int[1];
+ num[1] = new int[5];
+ num[2] = new int[2];
+ num[3] = new int[3];
+```
+> So here we are defining columns explicitly.
+
+``Another Way:```
+
+```java
+int[][] num={ {1}, {1,2}, {1,2,3,4,5}, {1,2}, {1,2,3} };
+
+//For Accessing:
+
+for (int i=0; i<(num.length); i++ ) {
+    for (int j=0;j<num[i].length;j++)
+        System.out.println(num[i][j]);
+}
+
+//Alternatively:
+
+for (int[] a : num) {
+  for (int i : a) {
+    System.out.println(i);
+  }
+}
+
+```
+Ragged arrays are multidimensional arrays.
 
 ```java
 
