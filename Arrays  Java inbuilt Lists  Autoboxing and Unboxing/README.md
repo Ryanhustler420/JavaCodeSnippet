@@ -4,6 +4,35 @@
 
 ## How to use
 
+
+You can either use array declaration or array literal (but only when you declare and affect the variable right away, array literals cannot be used for re-assigning an array).
+
+For primitive types:
+
+```java
+int[] myIntArray = new int[3];
+int[] myIntArray = {1,2,3};
+int[] myIntArray = new int[]{1,2,3};
+```
+
+For classes, for example String, it's the same:
+
+```java
+String[] myStringArray = new String[3];
+String[] myStringArray = {"a","b","c"};
+String[] myStringArray = new String[]{"a","b","c"};
+```
+
+The third way of initializing is useful when you declare the array first and then initialize it. The cast is necessary here.
+
+```java
+
+String[] myStringArray;
+myStringArray = new String[]{"a","b","c"};
+
+```
+
+
 ```java
 
 int [] myIntArray;
