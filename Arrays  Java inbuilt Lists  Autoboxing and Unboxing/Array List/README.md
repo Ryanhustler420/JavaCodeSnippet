@@ -261,3 +261,18 @@ Element found on sorted String Java array using binary search
 Found elements in Java array using for loop
 
 ```
+## Sum of ArrayList without looping
+
+> Once java-8 is out (March 2014) you'll be able to use streams:
+
+```java
+
+// If you have a List<Integer>
+
+ int sum = list.stream().mapToInt(Integer::intValue).sum();
+
+// If it's an int[]
+
+ int sum = IntStream.of(a).sum();
+
+```
