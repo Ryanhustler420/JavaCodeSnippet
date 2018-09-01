@@ -250,10 +250,34 @@ if(highScore == 50) { 	// this is expression
 }
 ```
 
+## convert a String into an array of Strings containing one character each
 
+```java
+String[] result = input.split("(?!^)");
+```
+> What this does is split the input String on all empty Strings that are not preceded by the beginning of the String.
 
+``or``
 
+```java
 
+String x = "gauravgupta";
+String [] y = x.split("");
+
+```
+``or``
+
+```java
+
+String test = "aabbab ";
+char[] t = test.toCharArray();
+
+for(char c : t)
+    System.out.println(c);    
+
+System.out.println("The end!");    
+
+```
 
 
 
