@@ -296,7 +296,33 @@ System.out.println("The end!");
 ```
 
 
+## How to convert a char to a String?
 
+```java
+
+// 1. 
+String stringValueOf = String.valueOf('c'); // most efficient
+
+// 2. 
+String stringValueOfCharArray = String.valueOf(new char[]{x});
+
+// 3. 
+String characterToString = Character.toString('c');
+
+// 4. 
+String characterObjectToString = new Character('c').toString();
+
+   // Although this method seems very simple, 
+   // this is less efficient because the concatenation
+   // expands to new StringBuilder().append(x).append("").toString();
+
+// 5. 
+String concatBlankString = 'c' + "";
+
+// 6. 
+String fromCharArray = new String(new char[]{x});
+
+```
 
 
 
