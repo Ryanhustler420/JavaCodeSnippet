@@ -279,7 +279,21 @@ System.out.println("The end!");
 
 ```
 
+## Getting input from user in Console without using Scanner
 
+> if you are using the Java SE6 or higher then you can make use of Console class
+
+```java
+
+   Console console = System.console();
+   if (console==null){
+      System.out.print("console not available ");
+   }else {
+      String line = console.readLine("Enter name :");
+      System.out.print("your name :"+line);
+   }
+
+```
 
 
 
