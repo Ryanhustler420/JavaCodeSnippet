@@ -324,7 +324,22 @@ String fromCharArray = new String(new char[]{x});
 
 ```
 
+## Remove Duplicate String in String Array
 
+```java
+
+String a = "ThisIsASimpleStringWithExampleOfDuplicateCharacter";
+String s[] = (a).split("(?!^)");
+int counter = 26;
+
+String[] array = Arrays.stream(s).distinct().toArray(String[]::new);
+
+
+for(int i=0;i<array.length-1;i++) {
+		System.out.print(array[i]);
+}
+
+```
 
 
 
