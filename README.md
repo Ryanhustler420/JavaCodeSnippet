@@ -371,3 +371,35 @@ public class ArrayToString    {
  }
 
 }
+```
+
+## Example of a String Contains all Alphabate or not
+
+```java
+
+int counter = 0;
+//String a = "toosmallword".toUpperCase();
+String s[] = (str.toUpperCase()).split("(?!^)");
+String[] array = Arrays.stream(s).distinct().toArray(String[]::new); //[a,b,c,d,e,f]
+
+for (int i = 0; i < array.length; i++) {
+	int val = (int) array[i].charAt(0) - 64;
+	if(val > 0 && val < 27) {
+		counter++;				
+	}
+}
+
+//System.out.println(counter);
+
+if(counter==26){
+	System.out.println("YES");
+}else{
+	System.out.println("NO");
+}
+
+
+```
+
+
+
+
