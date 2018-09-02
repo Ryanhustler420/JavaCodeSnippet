@@ -356,5 +356,18 @@ for(int i=0;i<array.length-1;i++) {
 
 ```
 
+## convert string array to string in Java
 
+> Use Arrays.toString method
+```java
+public class ArrayToString    {
+      	public static void main(String[] args){      
+ 	
+	String[] strArray = new String[]{"Java", "PHP", ".NET", "PERL", "C", "COBOL"};
+        String newString = Arrays.toString(strArray);
+        newString = newString.substring(1, newString.length()-1);           
+        System.out.println("New New String: " + newString); 
 
+ }
+
+}
