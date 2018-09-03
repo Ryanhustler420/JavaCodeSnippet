@@ -413,4 +413,12 @@ int y = x - '0'; // will gives 9
 ```
 
 
+## convert minutes to Hours and minutes (hh:mm) in java
 
+```java
+
+int hours = t / 60; //since both are ints, you get an int
+int minutes = t % 60;
+System.out.printf("%d:%02d", hours, minutes);
+
+```
