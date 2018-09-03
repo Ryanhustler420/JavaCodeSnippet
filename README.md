@@ -400,6 +400,17 @@ if(counter==26){
 
 ```
 
+## convert a char to int in Java
+
+> As it happens, the ascii/unicode value of the character '9' is nine greater than the value of '0' (similarly for the other digits).
+So you can get the int value of a decimal digit char using subtraction.
+
+```java
+
+char x = '9';
+int y = x - '0'; // will gives 9
+
+```
 
 
 
